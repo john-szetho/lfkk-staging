@@ -1,0 +1,11 @@
+body.donate {
+    background-color: var(--lfkk-primary-D);
+
+    @include sm {
+        background-color: var(--lfkk-primary-B);
+    }
+
+    header, main {
+        background-color: var(--lfkk-primary-B);
+    }
+}

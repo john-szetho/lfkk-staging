@@ -1,0 +1,145 @@
+#nav_container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+
+    nav[role="slide"] {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: all;
+        filter: drop-shadow(0 0 1rem var(--lfkk-primary-D));
+
+        transition: transform .5s ease;
+
+        &:not(.open) {
+            transform: translateX(calc(100% + 3rem));
+            transition: none;
+        }
+
+        .container {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            top: 0;
+            right: 0;
+            color: var(--lfkk-primary-B);
+            background-color: var(--lfkk-primary-D);
+
+            @include sm {
+                width: 100%;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                
+                a {
+                    &:hover,
+                    &.active {
+                        color: var(--lfkk-secondary-C);
+                    }
+                }
+    
+                &:hover a {
+                    color: var(--lfkk-primary-B-lop);
+    
+                    &:hover {
+                        color: var(--lfkk-primary-B);
+                    }
+    
+                    &.active {
+                        color: var(--lfkk-secondary-C);
+                    }
+                }
+            }
+        }
+    }
+
+    #backdrop {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(1rem);
+        opacity: 1;
+        transition: opacity .5s ease;
+
+        &:not(.open) {
+            opacity: 0;
+        }
+    }
+}
+
+header {
+    padding: 1rem 1rem 0 1rem;
+    position: relative;
+    z-index: 3;
+    
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 6em;
+        margin: 0 auto;
+
+        @include sm {
+            padding-bottom: 4.5rem;
+        }
+    
+        .logo {
+            width: 7.5rem;
+            padding: .075rem .25rem 0 .25rem;
+    
+            img {
+                outline: solid var(--keyline-logo) var(--lfkk-primary-D-lop);
+                border-radius: 100%;
+            }
+
+            &.logo {
+                padding: initial;
+            }
+        }
+        
+        #nav_trigger {
+            padding: .35rem .7rem;
+            width: initial;
+            height: min-content;
+            border-radius: 10rem;
+            color: var(--lfkk-primary-D);
+            outline: dotted var(--keyline-thin) var(--lfkk-primary-D-lop);
+            cursor: pointer;
+
+            button {
+                cursor: pointer;
+            }
+
+            &:hover {
+                background-color: var(--lfkk-primary-D);
+                color: var(--lfkk-primary-B);
+                outline: none;
+                transition: .25s ease;
+            }
+        }
+    }
+    hr {
+        border-bottom: dotted var(--keyline) var(--lfkk-primary-D);
+    }
+}
+
+body.home {
+    header {
+        .logo {
+            width: 22rem;
+    
+            img {
+                outline: none;
+                border-radius: initial;
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Work Sans Variable';
+    src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf) format("truetype-variations");
+    font-weight: 300 450;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url(/assets/fonts/WorkSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Herbik';
+    src: url(/assets/fonts/HerbikUnlicensedTrial-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Herbik Italic';
+    src: url(/assets/fonts/HerbikUnlicensedTrial-Italic.ttf);
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Work Sans Variable', 'Work Sans', sans-serif;
+    font-feature-settings: "rlig" 1, "kern" 1, "rclt" 1, "calt" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss06" 1, "liga" 1, "onum" 1, "rvrn" 1;
+    font-variation-settings: "wght" 420;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include lg {
+        font-size: 1.2rem;
+    }
+
+    @include md {
+        font-size: 100%;
+    }
+
+    @include sm {
+        font-size: 1.4rem;
+    }
+}
+
+h1,
+nav[role="slide"] {
+    font-size: 4.75rem;
+    line-height: 102%;
+    letter-spacing: -0.065rem;
+    font-variation-settings: "wght" 360;
+    text-wrap: balance;
+
+    @include sm {
+        font-size: 3.4rem;
+        line-height: 102%;
+    }
+}
+
+h2,
+.links a,
+li::after {
+    font-size: 2.75rem;
+    line-height: 122%;
+    letter-spacing: -0.05rem;
+
+    @include sm {
+        font-size: 2.2rem;
+        line-height: 132%;
+    }
+}
+
+h3,
+#nav_trigger,
+#aoc_hover::after,
+.content {
+    font-size: 1.75rem;
+    line-height: 112%;
+    letter-spacing: -0.02rem;
+
+    @include sm {
+        font-size: 2rem;
+        line-height: 122%;
+    }
+}
+
+.logo {
+    font-size: 7.5rem;
+    line-height: 102%;
+    letter-spacing: -0.0375rem;
+}
+
+// .home h2 {
+//     @include sm {
+//         font-size: 2.75rem;
+//         line-height: 122%;
+//     }
+// }
+
+table tbody tr td {
+    @include sm {
+        font-size: 1.75rem;
+        line-height: 122%;
+    }
+}
+
+#nav a {
+    @include sm {
+        font-size: 4.75rem;
+        line-height: 102%;
+    }
+}
+
+.links a {
+    line-height: 102%;
+}
+
+li a::after {
+    font-variation-settings: "wght" 360;
+}
+
+.title button {
+    font-variation-settings: "wght" 270;
+}

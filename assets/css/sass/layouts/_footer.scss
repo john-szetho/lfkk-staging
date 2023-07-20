@@ -1,0 +1,113 @@
+footer {
+    background-color: var(--lfkk-primary-D);
+    color: var(--lfkk-primary-B);
+    row-gap: 9rem;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+
+    @include md {
+        position: relative;
+    }
+
+    @include sm {
+        position: relative;
+        row-gap: 7.5rem;
+    }
+
+    .aoc_container {
+        .flag {
+            display: flex;
+            flex-direction: column;
+            row-gap: .5rem;
+
+            img {
+                padding-right: 1.5rem;
+            }
+        }
+        .aoc {
+            display: flex;
+            flex-direction: column;
+            padding-right: 1rem;
+            cursor: pointer;
+
+            span {
+                display: none;
+            }
+
+            &:hover {
+                button {
+                    display: none;
+                }
+                span {
+                    display: initial;
+                }
+            }
+        }
+    }
+
+    .aoc_container,
+    .footer_nav,
+    .footer_socials {
+        padding-top: .5rem;
+        border-top: dotted var(--keyline) var(--lfkk-primary-B-lop);
+    }
+
+    .footer_nav,
+    .footer_socials {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_socials a:hover::after {
+        content: "↗";
+        padding-left: 0.25rem;
+        position: absolute;
+    }
+
+    .copyright,
+    .abn {
+        color: var(--lfkk-primary-B-lop);
+    }
+
+    a {
+        &:hover {
+            color: var(--lfkk-secondary-C);
+        }
+    }
+
+    @include md {
+        .aoc_container {
+            .flag {
+                width: 8rem;
+            }
+            .aoc {
+                padding-right: 2rem;
+            }
+        }
+    }
+
+    @include sm {
+        .aoc_container {
+            .aoc {
+                button {
+                    display: none;
+                }
+                span {
+                    display: initial;
+                    color: var(--lfkk-primary-B-lop);
+                }
+            }
+        }
+        .copyright {
+            span {
+                display: none;
+            }
+            &::before {
+                content: "© LFKK '23";
+                display: block;
+            }
+        }
+    }
+}

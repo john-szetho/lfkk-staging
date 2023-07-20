@@ -1,0 +1,20 @@
+body.home {
+    background-color: var(--lfkk-primary-D);
+    color: var(--lfkk-primary-D);
+
+    @include sm {
+        background-color: var(--lfkk-primary-A);
+    }
+
+    header, main {
+        background-color: var(--lfkk-primary-A);
+
+        .intro {
+            h2 {
+                @include md {
+                    padding-right: 2rem;
+                }
+            }
+        }
+    }
+}

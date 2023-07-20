@@ -1,0 +1,116 @@
+body.about {
+    background-color: var(--lfkk-primary-D);
+
+    @include sm {
+        background-color: var(--lfkk-primary-B);
+    }
+
+    header, main {
+        background-color: var(--lfkk-primary-B);
+    }
+
+    main {
+        .content {
+            row-gap: 0;
+
+            div {
+                .title {
+                    padding-bottom: 1.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    button {
+                        cursor: pointer;
+
+                        @include sm {
+                            display: none;
+                        }
+
+                        &:not(.open) {
+                            color: var(--lfkk-primary-D-lop);
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+        
+                &:not(:first-child) .title {
+                    border-top: dotted var(--keyline) var(--lfkk-primary-D-lop);
+                    padding: 1.5rem 0;
+                }
+        
+                &:not(:last-child) .blocks {
+                    margin-bottom: 4.5rem;
+                }
+        
+                .blocks {
+                    padding-right: 2rem;
+                    transition: opacity 1.5s ease;
+        
+                    figure {
+                        padding-top: .5rem;
+                        padding-right: 2rem;
+        
+                        img {
+                            outline: solid var(--keyline-thin) var(--lfkk-primary-D);
+                            border-radius: 1rem;
+                            overflow: hidden;
+                            aspect-ratio: 4/3;
+                        }
+                    }
+        
+                    ul {
+                        list-style-type: circle;
+                        padding-left: 4rem;
+        
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: .75rem;
+                            }
+                        }
+                    }
+
+                    table {
+                        tbody tr {
+                            font-variant-numeric: tabular-nums;
+                            padding: 1.25rem 0;
+    
+                            &:not(:first-child) {
+                                border-top: dotted var(--keyline) var(--lfkk-primary-D-lop);
+                            }
+    
+                            .year {
+                                &::after {
+                                    content: "–"
+                                }
+                            }
+                        }
+                    }
+        
+                    &.collapsed {
+                        opacity: 0;
+                        height: 0;
+                        margin-bottom: 0;
+                        pointer-events: none;
+                        overflow: hidden;
+                        transition: opacity .5s ease;
+                    }
+
+
+                    @include sm {
+                        padding-right: 0;
+
+                        &.collapsed {
+                            opacity: initial;
+                            height: initial;
+                            margin-bottom: 4.5rem;
+                            pointer-events: initial;
+                            overflow: initial;
+                            transition: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
