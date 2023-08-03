@@ -14,7 +14,7 @@
         top: 0;
         left: 0;
         pointer-events: all;
-        filter: drop-shadow(0 0 1rem var(--lfkk-primary-D));
+        filter: var(--drop-shadow);
 
         transition: transform .5s ease;
 
@@ -40,6 +40,10 @@
                 display: flex;
                 flex-direction: column;
                 padding: 1rem;
+
+                @include sm {
+                    padding: 2rem 1rem;
+                }
                 
                 a {
                     &:hover,
@@ -66,9 +70,10 @@
     #backdrop {
         width: 100%;
         height: 100%;
-        backdrop-filter: blur(1rem);
         opacity: 1;
         transition: opacity .5s ease;
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
 
         &:not(.open) {
             opacity: 0;
@@ -80,11 +85,15 @@ header {
     padding: 1rem 1rem 0 1rem;
     position: relative;
     z-index: 3;
+
+    @include sm {
+        padding: 2rem 1rem 0 1rem;
+    }
     
     .inner {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 6em;
+        padding-bottom: 6rem;
         margin: 0 auto;
 
         @include sm {
@@ -92,27 +101,34 @@ header {
         }
     
         .logo {
-            width: 7.5rem;
-            padding: .075rem .25rem 0 .25rem;
+            width: 9rem;
+            padding: .075rem .175rem 0 .175rem;
     
             img {
                 outline: solid var(--keyline-logo) var(--lfkk-primary-D-lop);
                 border-radius: 100%;
             }
-
-            &.logo {
-                padding: initial;
-            }
         }
         
         #nav_trigger {
-            padding: .35rem .7rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 1rem;
+            padding: .35rem .8rem;
             width: initial;
             height: min-content;
             border-radius: 10rem;
             color: var(--lfkk-primary-D);
-            outline: dotted var(--keyline-thin) var(--lfkk-primary-D-lop);
+            outline: solid var(--keyline-thin) var(--lfkk-primary-D-lop);
             cursor: pointer;
+            background-color: var(--lfkk-secondary-A-hop);
+            backdrop-filter: blur(.15rem);
+            -webkit-backdrop-filter: blur(.15rem);
+
+            @include sm {
+                margin: 2rem 1rem;
+            }
 
             button {
                 cursor: pointer;

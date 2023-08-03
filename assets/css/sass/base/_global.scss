@@ -3,6 +3,10 @@ html {
     font-size: 1.15vw;
     scroll-behavior: smooth;
 
+    @include xl {
+        font-size: .8vw;
+    }
+
     @include md {
         font-size: 1.8vw;
     }

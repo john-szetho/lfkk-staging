@@ -57,6 +57,12 @@ body.about {
                             overflow: hidden;
                             aspect-ratio: 4/3;
                         }
+
+                        &[data-ratio="4/5"] {
+                            img {
+                                aspect-ratio: 4/5;
+                            }
+                        }
                     }
         
                     ul {

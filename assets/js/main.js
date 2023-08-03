@@ -38,8 +38,10 @@ window.onload = () => {
     var aoc = document.querySelector("#preloader #aoc_hover")
     var aocBackdrop = document.querySelector("#preloader #aoc_backdrop")
     var gallery = document.querySelector("#preloader .gallery")
+    var galleryInner = document.querySelector("#preloader .gallery .inner")
     var header = document.querySelector('header')
     var preloader = document.querySelector("#preloader")
+    var rootElem = document.querySelector(":root")
 
     function logoHide() {
         logo.classList.add("hide")
@@ -59,11 +61,12 @@ window.onload = () => {
 
             setTimeout(() => {
                 backdropHide()
-            }, 300)
+            }, 30)
         }, 1200);
         
         logo.addEventListener("click", () => {
             logoHide()
+            backdropHide()
         })
     }
 
@@ -73,7 +76,16 @@ window.onload = () => {
 
             setTimeout(() => {
                 preloader.remove()
-            }, 1200)
+            }, 1000)
+        })
+    }
+
+    if (galleryInner) {
+        window.addEventListener("mousemove", (event) => {
+            rootElem.style.setProperty("--translateX", -(event.pageX * 0.07).toFixed(2) + "px")
+            rootElem.style.setProperty("--translateY", -(event.pageY * 0.09).toFixed(2) + "px")
+            rootElem.style.setProperty("--rotateY", (event.pageY * 0.007).toFixed(2) + "deg")
+            rootElem.style.setProperty("--rotateZ", -(event.pageX * 0.005).toFixed(2) + "deg")
         })
     }
 
@@ -139,9 +151,12 @@ window.onload = () => {
         rewind: true,
         arrows: false,
         pagination: true,
-        speed: 1200,
-        // autoplay: true,
+        speed: 2400,
+        autoplay: true,
         // interval: 4800,
         pauseOnHover: false
     }).mount());
+
+    // swup
+    // const swup = new Swup();
 }

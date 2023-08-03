@@ -1,8 +1,12 @@
 main {
     padding: 1rem 1rem 6rem 1rem;
-    filter: drop-shadow(0 0 1rem var(--lfkk-primary-D));
+    filter: var(--drop-shadow);
     position: relative;
     z-index: 2;
+
+    @include md {
+        filter: none;
+    }
 
     .intro {
         h1 {
@@ -21,15 +25,15 @@ main {
     .content {
         padding-left: 1rem;
         margin-left: -1rem;
-        border-left: dotted var(--keyline-thin) var(--lfkk-primary-D-lop);
+        border-left: dotted var(--keyline) var(--lfkk-primary-D-lop);
         padding-bottom: 6rem;
     
         .images {
             outline: solid var(--keyline-thin) var(--lfkk-primary-D);
             border-radius: 1rem;
             overflow: hidden;
-            filter: saturate(0) contrast(175%) brightness(125%);
-            mix-blend-mode: screen;
+            // filter: saturate(0) contrast(175%) brightness(125%);
+            // mix-blend-mode: screen;
             margin-bottom: .5rem;
             aspect-ratio: 3/2;
             transition: margin .5s ease;
@@ -41,8 +45,8 @@ main {
             }
             
             &:hover {
-                filter: initial;
-                mix-blend-mode: normal;
+                // filter: initial;
+                // mix-blend-mode: normal;
                 box-shadow: 0 0 4rem 0px var(--lfkk-secondary-A-lop);
             }
         }
@@ -84,6 +88,13 @@ main {
     @include sm {
         padding: 1rem 1rem 4.5rem 1rem;
 
+        .intro {
+            h1 {
+                padding-bottom: 1.25rem;
+                padding-top: 0.25rem;
+            }
+        }
+
         .content {
             padding-bottom: 4.5rem;
 
@@ -103,11 +114,11 @@ main {
                     a {
                         &::after {
                             content: '→';
-                            transform: translateY(-1.125rem);
+                            transform: translateY(-1.5rem);
                             height: 0;
                         }
                         &:hover::after {
-                            transform: translateY(-1.125rem);
+                            transform: translateY(-1.5rem);
                         }
                     }
                 }

@@ -8,4 +8,17 @@ body.donate {
     header, main {
         background-color: var(--lfkk-primary-B);
     }
+
+    .content {
+        .pay {
+            margin-bottom: .75rem;
+
+            h2 {
+                padding-bottom: 1.5rem;
+            }
+            p:not(:first-of-type) {
+                padding-top: 1.5rem;
+            }
+        }
+    }
 }

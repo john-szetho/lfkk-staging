@@ -12,8 +12,10 @@ footer {
     }
 
     @include sm {
+        padding: 1rem 1rem 2rem 1rem;
         position: relative;
         row-gap: 7.5rem;
+        row-gap: 4.5rem;
     }
 
     .aoc_container {
@@ -21,6 +23,7 @@ footer {
             display: flex;
             flex-direction: column;
             row-gap: .5rem;
+            width: 7.5rem;
 
             img {
                 padding-right: 1.5rem;
@@ -79,9 +82,6 @@ footer {
 
     @include md {
         .aoc_container {
-            .flag {
-                width: 8rem;
-            }
             .aoc {
                 padding-right: 2rem;
             }
@@ -91,12 +91,14 @@ footer {
     @include sm {
         .aoc_container {
             .aoc {
+                cursor: initial;
+
                 button {
                     display: none;
                 }
                 span {
                     display: initial;
-                    color: var(--lfkk-primary-B-lop);
+                    // color: var(--lfkk-primary-B-lop);
                 }
             }
         }
@@ -105,7 +107,7 @@ footer {
                 display: none;
             }
             &::before {
-                content: "© LFKK '23";
+                content: "© LFKK Inc. ’23";
                 display: block;
             }
         }
