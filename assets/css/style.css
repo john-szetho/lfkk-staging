@@ -402,7 +402,7 @@ html.is-animating .transition-fade {
     pointer-events: initial;
   }
 }
-@media (max-height: 125vw) {
+@media (max-width: 540px) and (max-height: 125vw) {
   #preloader .logo {
     display: none;
   }

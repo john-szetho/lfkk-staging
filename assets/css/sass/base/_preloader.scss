@@ -93,10 +93,10 @@
                 opacity: 1;
                 pointer-events: initial;
             }
-        }
 
-        @media (max-height: 125vw) {
-            display: none;
+            @media (max-height: 125vw) {
+                display: none;
+            }
         }
     }
 
@@ -135,10 +135,6 @@
 
             @include sm {
                 padding: 0 .25rem;
-
-                // &::after {
-                //     display: none;
-                // }
             }
         }
 
