@@ -29,3 +29,10 @@ header, main, footer {
 img {
     object-fit: cover;
 }
+
+a {
+    text-decoration-thickness: var(--keyline-underline) !important;
+    -webkit-text-decoration-thickness: var(--keyline-underline) !important;
+    text-underline-offset: calc(var(--keyline-underline) * 4) !important;
+    -webkit-text-underline-offset: calc(var(--keyline-underline) * 4) !important;
+}

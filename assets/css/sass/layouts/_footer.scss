@@ -14,8 +14,7 @@ footer {
     @include sm {
         padding: 1rem 1rem 2rem 1rem;
         position: relative;
-        row-gap: 7.5rem;
-        row-gap: 4.5rem;
+        row-gap: 6rem;
     }
 
     .aoc_container {
@@ -33,19 +32,16 @@ footer {
             display: flex;
             flex-direction: column;
             padding-right: 1rem;
-            cursor: pointer;
 
-            span {
+            button {
                 display: none;
             }
+            span {
+                display: initial;
+            }
 
-            &:hover {
-                button {
-                    display: none;
-                }
-                span {
-                    display: initial;
-                }
+            @include xl {
+                padding-right: 15rem;
             }
         }
     }
@@ -91,8 +87,6 @@ footer {
     @include sm {
         .aoc_container {
             .aoc {
-                cursor: initial;
-
                 button {
                     display: none;
                 }

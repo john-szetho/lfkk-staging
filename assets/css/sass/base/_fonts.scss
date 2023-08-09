@@ -61,7 +61,7 @@ h2,
 .links a,
 li::after {
     font-size: 2.75rem;
-    line-height: 122%;
+    line-height: 118%;
     letter-spacing: -0.05rem;
 
     @include sm {
@@ -76,12 +76,11 @@ h3,
 #aoc_hover::after,
 .content {
     font-size: 1.75rem;
-    line-height: 112%;
+
+    line-height: 115%;
     letter-spacing: -0.02rem;
 
     @include sm {
-        // font-size: 2rem;
-        // line-height: 122%;
         font-size: 1.75rem;
         line-height: 122%;
         letter-spacing: -0.02rem;
@@ -97,6 +96,7 @@ h3,
 table tbody tr td {
     @include sm {
         font-size: 1.75rem;
+
         line-height: 122%;
     }
 }
@@ -105,6 +105,12 @@ table tbody tr td {
     @include sm {
         font-size: 4.75rem;
         line-height: 102%;
+    }
+}
+
+#aoc_hover h3 {
+    @include sm {
+        font-size: 1.375rem;
     }
 }
 

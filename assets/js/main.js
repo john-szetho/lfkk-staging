@@ -42,9 +42,18 @@ window.onload = () => {
     var header = document.querySelector('header')
     var preloader = document.querySelector("#preloader")
     var rootElem = document.querySelector(":root")
+    var bodyPre = document.querySelector("body.home.pre")
 
     function logoHide() {
         logo.classList.add("hide")
+    }
+
+    function mobHide() {
+        preloader.classList.add("hide")
+    }
+
+    function bodyLoaded() {
+        bodyPre.classList.remove("pre")
     }
 
     function scrollToHeader() {
@@ -67,6 +76,17 @@ window.onload = () => {
         logo.addEventListener("click", () => {
             logoHide()
             backdropHide()
+        })
+    }
+
+    if (preloader) {
+        preloader.addEventListener("click", () => {
+            mobHide()
+            backdropHide()
+
+            if (bodyPre) {
+                bodyLoaded()
+            }
         })
     }
 
@@ -156,7 +176,4 @@ window.onload = () => {
         // interval: 4800,
         pauseOnHover: false
     }).mount());
-
-    // swup
-    // const swup = new Swup();
 }

@@ -16,8 +16,13 @@ main {
             margin-left: -.2rem;
         }
         h2 {
-            a:hover {
-                text-decoration: underline;
+            a {
+                text-decoration: underline dotted;
+                -webkit-text-decoration: underline dotted;
+                
+                &:hover {
+                    color: var(--lfkk-primary-A);
+                }
             }
         }
     }
@@ -30,13 +35,17 @@ main {
     
         .images {
             outline: solid var(--keyline-thin) var(--lfkk-primary-D);
+            // box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D);
             border-radius: 1rem;
             overflow: hidden;
-            // filter: saturate(0) contrast(175%) brightness(125%);
-            // mix-blend-mode: screen;
             margin-bottom: .5rem;
             aspect-ratio: 3/2;
             transition: margin .5s ease;
+
+            .splide__track {
+                width: 100%;
+                height: 100%;
+            }
     
             img {
                 object-position: top;
@@ -61,8 +70,10 @@ main {
                 width: 100%;
                 border-top: dotted var(--keyline) var(--lfkk-primary-D);
                 border-bottom: dotted var(--keyline) var(--lfkk-primary-D);
-                transition: padding .5s ease;
-    
+                transition: padding .5s ease,
+                            border-top .5s ease,
+                            border-bottom .5s ease;
+
                 a {
                     width: 100%;
                     padding: 1.25rem 0;
@@ -76,10 +87,27 @@ main {
                         transform: translateY(-1.475rem);
                         height: 0;
                     }
+
+                    &:hover {
+                        color: var(--lfkk-primary-D) !important;
+                    }
                 }
-    
+
                 &:hover {
                     padding-right: 1rem;
+                    border-top: dotted var(--keyline) var(--lfkk-primary-D) !important;
+                    border-bottom: dotted var(--keyline) var(--lfkk-primary-D) !important;
+                }
+            }
+
+            &:hover {
+                li {
+                    border-top: dotted var(--keyline) var(--lfkk-primary-D-lop);
+                    border-bottom: dotted var(--keyline) var(--lfkk-primary-D-lop);
+    
+                    a {
+                        color: var(--lfkk-primary-D-lop);
+                    }
                 }
             }
         }
@@ -105,10 +133,14 @@ main {
                 flex-direction: column;
 
                 li {
-                    border-bottom: initial;
+                    &:first-child {
+                        border-top: dotted var(--keyline) var(--lfkk-primary-D) !important;
+                        border-bottom: initial !important;
+                    }
 
                     &:not(:first-child) {
-                        border-bottom: dotted var(--keyline) var(--lfkk-primary-D);
+                        border-top: dotted var(--keyline) var(--lfkk-primary-D) !important;
+                        border-bottom: dotted var(--keyline) var(--lfkk-primary-D) !important;
                     }
 
                     a {

@@ -4,10 +4,40 @@ body.home {
 
     @include sm {
         background-color: var(--lfkk-primary-A);
+
+        &.pre {
+            background-color: var(--lfkk-secondary-D);
+            height: 100%;
+            overflow: hidden;
+        }
     }
 
     header, main {
         background-color: var(--lfkk-primary-A);
+
+        .inner {
+            padding-top: .5rem;
+
+            .logo {
+                width: 22rem;
+
+                svg {
+                    outline: none;
+                    box-shadow: none;
+                    border-radius: initial;
+
+                    &:hover {
+                        fill: var(--lfkk-secondary-A-hop);
+                    }
+
+                    @include sm {
+                        &:hover {
+                            fill: initial;
+                        }
+                    }
+                }
+            }
+        }
 
         .intro {
             h2 {

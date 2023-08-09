@@ -158,6 +158,9 @@ footer {
             figure {
                 grid-column: 1/12;
             }
+            figure:not(:first-child) {
+                grid-column: 2/13;
+            }
 
             table {
                 tbody tr {
