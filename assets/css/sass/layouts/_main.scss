@@ -35,13 +35,22 @@ main {
     
         .images {
             outline: solid var(--keyline-thin) var(--lfkk-primary-D);
-            // box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D);
             border-radius: 1rem;
             overflow: hidden;
             margin-bottom: .5rem;
             aspect-ratio: 3/2;
             transition: margin .5s ease;
+            isolation: isolate;
 
+            @include lg {
+                aspect-ratio: 8/5;
+            }
+
+            @include md {
+                aspect-ratio: 3/2;
+            }
+
+            .splide,
             .splide__track {
                 width: 100%;
                 height: 100%;

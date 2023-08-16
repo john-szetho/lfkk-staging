@@ -93,15 +93,16 @@ header {
     .inner {
         display: flex;
         justify-content: space-between;
+        padding-top: .5rem;
         padding-bottom: 1.88rem;
         margin: 0 auto;
 
-        @include sm {
-            padding-bottom: 4.5rem;
-        }
+        // @include sm {
+        //     padding-bottom: 4.5rem;
+        // }
     
         .logo {
-            width: 9rem;
+            width: 10.5rem;
             padding: .075rem .175rem 0 .175rem;
 
             a {
@@ -110,7 +111,6 @@ header {
         
                 svg {
                     outline: solid var(--keyline-logo) var(--lfkk-primary-D-lop);
-                    // box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D-lop);
                     border-radius: 100%;
                     width: 100%;
                     height: auto;
@@ -129,7 +129,6 @@ header {
             border-radius: 10rem;
             color: var(--lfkk-primary-D);
             outline: solid var(--keyline-thin) var(--lfkk-primary-D-lop);
-            // box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D-lop);
             cursor: pointer;
             background-color: var(--lfkk-secondary-A-hop);
             backdrop-filter: blur(.15rem);

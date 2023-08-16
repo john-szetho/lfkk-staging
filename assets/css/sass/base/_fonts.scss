@@ -29,7 +29,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     @include lg {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     @include md {
@@ -66,17 +66,15 @@ li::after {
 
     @include sm {
         font-size: 2.2rem;
-        line-height: 132%;
+        line-height: 129%;
         letter-spacing: -0.05rem;
     }
 }
 
 h3,
 #nav_trigger,
-#aoc_hover::after,
 .content {
     font-size: 1.75rem;
-
     line-height: 115%;
     letter-spacing: -0.02rem;
 
@@ -96,7 +94,6 @@ h3,
 table tbody tr td {
     @include sm {
         font-size: 1.75rem;
-
         line-height: 122%;
     }
 }
@@ -108,9 +105,19 @@ table tbody tr td {
     }
 }
 
-#aoc_hover h3 {
+#aoc_hover h3,
+#aoc_hover::after {
+    font-size: 1.425rem;
+    line-height: 122%;
+
+    @include md {
+        font-size: 1.25rem;
+        line-height: 122%;
+    }
+
     @include sm {
         font-size: 1.375rem;
+        line-height: 122%;
     }
 }
 

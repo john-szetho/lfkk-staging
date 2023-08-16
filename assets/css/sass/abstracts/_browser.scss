@@ -1,0 +1,52 @@
+/* Safari 11+ */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        body {
+            header {
+                .inner {
+                    .logo a svg {
+                        outline: none !important;
+                        box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D-lop) !important;
+                    }
+                    #nav_trigger {
+                        outline: none !important;
+                        box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D-lop);
+                    }
+                }
+            }
+            main .content .images {
+                outline: none !important;
+                box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D);
+            }
+        }
+        body.home {
+            header {
+                .inner {
+                    .logo a svg {
+                        outline: none !important;
+                        box-shadow: none !important;
+                    }
+                }
+            }
+        }
+        body.about {
+            main .content div .blocks figure {
+                img {
+                    outline: none !important;
+                    box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D);
+                }
+            }
+        }
+    }
+}
+
+/* Test website on real Safari 11+ */
+
+/* Safari 10.1 */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+        body {
+            background-color: aqua !important;
+        }
+    }
+}

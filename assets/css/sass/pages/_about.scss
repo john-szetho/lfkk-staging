@@ -44,17 +44,28 @@ body.about {
                 }
         
                 .blocks {
-                    padding-right: 2rem;
+                    // padding-right: 2rem;
                     transition: opacity 1.5s ease;
         
                     figure {
                         padding-top: .5rem;
-                        padding-right: 2rem;
                         aspect-ratio: 4/3;
+
+                        &:first-child {
+                            aspect-ratio: 8/5;
+                            padding-right: 4rem;
+
+                            @include md {
+                                padding-right: 2rem;
+                            }
+
+                            @include sm {
+                                padding-right: 0;
+                            }
+                        }
         
                         img {
                             outline: solid var(--keyline-thin) var(--lfkk-primary-D);
-                            // box-shadow: 0 0 0 var(--keyline-thin) var(--lfkk-primary-D);
                             border-radius: 1rem;
                             overflow: hidden;
                             width: 100%;
@@ -73,7 +84,7 @@ body.about {
         
                     ul {
                         list-style-type: circle;
-                        padding-left: 4rem;
+                        padding-left: 2rem;
         
                         li {
                             &:not(:last-child) {

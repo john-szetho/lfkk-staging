@@ -102,10 +102,10 @@ window.onload = () => {
 
     if (galleryInner) {
         window.addEventListener("mousemove", (event) => {
-            rootElem.style.setProperty("--translateX", -(event.pageX * 0.07).toFixed(2) + "px")
-            rootElem.style.setProperty("--translateY", -(event.pageY * 0.09).toFixed(2) + "px")
-            rootElem.style.setProperty("--rotateY", (event.pageY * 0.007).toFixed(2) + "deg")
-            rootElem.style.setProperty("--rotateZ", -(event.pageX * 0.005).toFixed(2) + "deg")
+            rootElem.style.setProperty("--translateX", -(event.pageX * 0.03).toFixed(2) + "px")
+            rootElem.style.setProperty("--translateY", -(event.pageY * 0.05).toFixed(2) + "px")
+            rootElem.style.setProperty("--rotateY", (event.pageY * 0.003).toFixed(2) + "deg")
+            rootElem.style.setProperty("--rotateZ", -(event.pageX * 0.001).toFixed(2) + "deg")
         })
     }
 
