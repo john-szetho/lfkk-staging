@@ -4,7 +4,7 @@
     height: 100%;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: 350;
     pointer-events: none;
 
     nav[role="slide"] {
@@ -84,7 +84,7 @@
 header {
     padding: 1rem 1rem 0 1rem;
     position: relative;
-    z-index: 3;
+    z-index: 150;
 
     @include sm {
         padding: 2rem 1rem 0 1rem;
@@ -96,10 +96,6 @@ header {
         padding-top: .5rem;
         padding-bottom: 1.88rem;
         margin: 0 auto;
-
-        // @include sm {
-        //     padding-bottom: 4.5rem;
-        // }
     
         .logo {
             width: 10.5rem;

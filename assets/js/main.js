@@ -1,6 +1,10 @@
 "use strict"
 
 window.onload = () => {
+    // site credit
+    var siteCredit = `https://github.com/john-szetho`
+    console.log(siteCredit)
+
     // progress
     var i = 0;
     var bar = document.querySelector("#bar");

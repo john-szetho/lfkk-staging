@@ -2,7 +2,7 @@ main {
     padding: 1rem 1rem 6rem 1rem;
     filter: var(--drop-shadow);
     position: relative;
-    z-index: 2;
+    z-index: 10;
 
     @include md {
         filter: none;
@@ -21,7 +21,7 @@ main {
                 -webkit-text-decoration: underline dotted;
                 
                 &:hover {
-                    color: var(--lfkk-primary-A);
+                    background-color: var(--lfkk-primary-A);
                 }
             }
         }
@@ -63,8 +63,6 @@ main {
             }
             
             &:hover {
-                // filter: initial;
-                // mix-blend-mode: normal;
                 box-shadow: 0 0 4rem 0px var(--lfkk-secondary-A-lop);
             }
         }
